@@ -1,9 +1,9 @@
-package com.example.projetointegrador.ui.view
+package com.example.projetointegrador.ui.splash.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.projetointegrador.MainActivity
+import com.example.projetointegrador.ui.home.MainActivity
 import com.example.projetointegrador.databinding.ActivitySplashBinding
 import java.util.*
 
