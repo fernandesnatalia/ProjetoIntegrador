@@ -28,4 +28,8 @@
     <string name="contact_soon">RETORNAREMOS EM BREVE\nNO E-MAIL INFORMADO</string>
     <string name="finish_bottom">SAIR</string>
 
+    <!-- Descriptions-->
+
+    <string name="description_splash">Imagem tirada de cima da cidade de Bertioga à noite com as casas iluminadas e a praia ao lado</string>
+
 </resources>
