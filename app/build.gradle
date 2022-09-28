@@ -52,4 +52,17 @@ dependencies {
     //navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
+
+    //network connection
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.2.1"
+
+    //moshi
+    def moshi_version = "1.11.0"
+    implementation"com.squareup.moshi:moshi-kotlin:$moshi_version"
+
+    //room
+    implementation("androidx.room:room-runtime:2.4.3")
+    kapt("androidx.room:room-compiler:2.4.3")
 }
