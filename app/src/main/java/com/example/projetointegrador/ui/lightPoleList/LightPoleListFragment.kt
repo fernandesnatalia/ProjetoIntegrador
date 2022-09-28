@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.FragmentLightPoleListBinding
 
 class LightPoleListFragment : Fragment() {

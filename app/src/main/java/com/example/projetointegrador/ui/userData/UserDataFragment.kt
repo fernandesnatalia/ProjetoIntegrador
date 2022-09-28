@@ -5,14 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.projetointegrador.R
+import com.example.projetointegrador.databinding.FragmentUserDataBinding
 
 class UserDataFragment : Fragment() {
+    private lateinit var binding: FragmentUserDataBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_user_data, container, false)
+    ): View {
+        binding = FragmentUserDataBinding.inflate(layoutInflater,container,false)
+        return binding.root
     }
 }
