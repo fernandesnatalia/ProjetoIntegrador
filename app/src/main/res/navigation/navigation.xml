@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/confirmationFragment">
+
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.projetointegrador.ui.confirmation.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" >
+        <action
+            android:id="@+id/action_confirmationFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.projetointegrador.ui.end.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" />
+    <fragment
+        android:id="@+id/lightPoleListFragment"
+        android:name="com.example.projetointegrador.ui.lightPoleList.LightPoleListFragment"
+        android:label="fragment_light_pole_list"
+        tools:layout="@layout/fragment_light_pole_list" >
+        <action
+            android:id="@+id/action_lightPoleListFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.example.projetointegrador.ui.userData.UserDataFragment"
+        android:label="fragment_user_data"
+        tools:layout="@layout/fragment_user_data" >
+        <action
+            android:id="@+id/action_userDataFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.projetointegrador.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_lightPoleListFragment"
+            app:destination="@id/lightPoleListFragment" />
+    </fragment>
+</navigation>
