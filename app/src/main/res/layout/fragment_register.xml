@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.register.view.RegisterFragment">
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_30"
+        android:layout_marginTop="@dimen/size_100"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
+        android:autofillHints="name"
+        android:maxLength="40"
+        android:maxLines="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size_30"
+        android:layout_marginTop="@dimen/size_20"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:selectAllOnFocus="true"
+        android:autofillHints="no"
+        android:maxLength="20"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_70"
+        android:text="@string/send"
+        android:backgroundTint="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"/>
+
+    <Button
+        android:id="@+id/btnLeave"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_30"
+        android:text="@string/finish_bottom"
+        android:backgroundTint="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegister"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

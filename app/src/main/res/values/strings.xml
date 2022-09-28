@@ -22,6 +22,8 @@
     <string name="hint_cpf">INSIRA SEU CPF</string>
     <string name="hint_phone_number">INSIRA SEU TELEFONE</string>
     <string name="hint_description">DESCREVA O PROBLEMA</string>
+    <string name="hint_email">DIGITE SEU EMAIL</string>
+    <string name="hint_password">DIGITE SUA SENHA</string>
     <string name="send">ENVIAR</string>
     <string name="cancel">CANCELAR</string>
     <string name="confirmation_message">RECLAMAÇÃO ENVIADA</string>
