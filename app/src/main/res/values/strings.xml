@@ -1,6 +1,31 @@
 <resources>
     <string name="app_name">ProjetoIntegrador</string>
-
-    <!-- Descriptions -->
+    <string name="options_home">SELECIONE UMA DAS OPÇÕES ABAIXO</string>
+    <string name="administrative">ÁREA ADMINISTRATIVA</string>
+    <string name="problem">INFORMAR PROBLEMA DE ILUMINAÇÃO PÚBLICA</string>
+    <string name="code_list">SELECIONE O CÓDIGO ENCONTRADO NO QRCODE</string>
+    <string name="light_pole_1">PI-III - 0001</string>
+    <string name="light_pole_2">PI-III - 0002</string>
+    <string name="light_pole_3">PI-III - 0003</string>
+    <string name="light_pole_4">PI-III - 0004</string>
+    <string name="light_pole_5">PI-III - 0005</string>
+    <string name="light_pole_6">PI-III - 0006</string>
+    <string name="light_pole_title">POSTE DE ILUMINAÇÃO</string>
+    <string name="light_pole_code">CÓDIGO</string>
+    <string name="light_pole_street">RUA</string>
+    <string name="light_pole_district">BAIRRO</string>
+    <string name="light_pole_city">CIDADE</string>
+    <string name="data_confirmation">OS DADOS ESTÃO CORRETOS?</string>
+    <string name="yes">SIM</string>
+    <string name="no">NÃO</string>
+    <string name="hint_name">INSIRA SEU NOME</string>
+    <string name="hint_cpf">INSIRA SEU CPF</string>
+    <string name="hint_phone_number">INSIRA SEU TELEFONE</string>
+    <string name="hint_description">DESCREVA O PROBLEMA</string>
+    <string name="send">ENVIAR</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="confirmation_message">RECLAMAÇÃO ENVIADA</string>
+    <string name="contact_soon">RETORNAREMOS EM BREVE\nNO E-MAIL INFORMADO</string>
+    <string name="finish_bottom">SAIR</string>
 
 </resources>
