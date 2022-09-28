@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.example.projetointegrador.ui.confirmation.ConfirmationFragment"
+        android:name="com.example.projetointegrador.ui.confirmation.view.ConfirmationFragment"
         android:label="fragment_confirmation"
         tools:layout="@layout/fragment_confirmation" >
         <action
@@ -16,12 +16,12 @@
     </fragment>
     <fragment
         android:id="@+id/endFragment"
-        android:name="com.example.projetointegrador.ui.end.EndFragment"
+        android:name="com.example.projetointegrador.ui.end.view.EndFragment"
         android:label="fragment_end"
         tools:layout="@layout/fragment_end" />
     <fragment
         android:id="@+id/lightPoleListFragment"
-        android:name="com.example.projetointegrador.ui.lightPoleList.LightPoleListFragment"
+        android:name="com.example.projetointegrador.ui.lightPoleList.view.LightPoleListFragment"
         android:label="fragment_light_pole_list"
         tools:layout="@layout/fragment_light_pole_list" >
         <action
@@ -30,7 +30,7 @@
     </fragment>
     <fragment
         android:id="@+id/userDataFragment"
-        android:name="com.example.projetointegrador.ui.userData.UserDataFragment"
+        android:name="com.example.projetointegrador.ui.userData.view.UserDataFragment"
         android:label="fragment_user_data"
         tools:layout="@layout/fragment_user_data" >
         <action
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.projetointegrador.ui.home.HomeFragment"
+        android:name="com.example.projetointegrador.ui.home.view.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action

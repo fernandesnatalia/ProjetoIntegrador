@@ -1,4 +1,4 @@
-package com.example.projetointegrador.ui.lightPoleList
+package com.example.projetointegrador.ui.lightPoleList.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

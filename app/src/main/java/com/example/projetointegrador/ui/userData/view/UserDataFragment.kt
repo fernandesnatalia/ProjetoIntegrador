@@ -1,4 +1,4 @@
-package com.example.projetointegrador.ui.userData
+package com.example.projetointegrador.ui.userData.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

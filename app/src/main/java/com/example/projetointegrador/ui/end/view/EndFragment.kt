@@ -1,4 +1,4 @@
-package com.example.projetointegrador.ui.end
+package com.example.projetointegrador.ui.end.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
