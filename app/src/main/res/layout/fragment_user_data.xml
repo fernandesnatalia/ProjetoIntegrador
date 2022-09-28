@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.userData.UserDataFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/size_200"
+        android:layout_height="wrap_content"
+        android:text="@string/light_pole_title"
+        android:textColor="@color/purple"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_18"
+        android:layout_marginTop="@dimen/size_50"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnCodeLightCode"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginTop="@dimen/size_30"
+        android:backgroundTint="@color/orange"
+        android:text="@string/light_pole_code"
+        android:textColor="@color/light_gray"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@color/orange"
+        android:hint="@string/hint_name"
+        android:textColorHint="@color/light_gray"
+        android:maxLines="1"
+        android:maxLength="25"
+        android:autofillHints="name"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCodeLightCode"/>
+
+    <EditText
+        android:id="@+id/etCPFNumber"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@color/orange"
+        android:hint="@string/hint_cpf"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="11"
+        android:autofillHints="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUsername"/>
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@color/orange"
+        android:hint="@string/hint_phone_number"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="11"
+        android:autofillHints="phone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCPFNumber"/>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_60"
+        android:layout_marginTop="@dimen/size_30"
+        android:background="@color/orange"
+        android:hint="@string/hint_description"
+        android:textColorHint="@color/light_gray"
+        android:maxLines="5"
+        android:maxLength="200"
+        android:autofillHints="name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"/>
+
+    <Button
+        android:id="@+id/btnSendUserData"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_40"
+        android:backgroundTint="@color/red"
+        android:text="@string/send"
+        android:textColor="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+    <Button
+        android:id="@+id/btnCancelUserData"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:backgroundTint="@color/red"
+        android:text="@string/cancel"
+        android:textColor="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnSendUserData"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
