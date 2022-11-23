@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size_90"
         android:backgroundTint="@color/red"
-        android:text="@string/yes"
+        android:text="@string/finish_bottom"
         android:textColor="@color/light_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

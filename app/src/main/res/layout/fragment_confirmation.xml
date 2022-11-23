@@ -39,6 +39,7 @@
         android:layout_height="@dimen/size_60"
         android:layout_marginTop="@dimen/size_30"
         android:backgroundTint="@color/orange"
+        android:fontFamily="sans-serif"
         android:text="@string/light_pole_street"
         android:textColor="@color/light_gray"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/btnCodeLightCode" />
 
     <Button
-        android:id="@+id/btnbtnCodeLightDistrict"
+        android:id="@+id/btnbtnCodeLightNeighborhood"
         android:layout_width="@dimen/size_300"
         android:layout_height="@dimen/size_60"
         android:layout_marginTop="@dimen/size_30"
@@ -67,7 +68,7 @@
         android:textColor="@color/light_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnbtnCodeLightDistrict" />
+        app:layout_constraintTop_toBottomOf="@id/btnbtnCodeLightNeighborhood" />
 
     <TextView
         android:id="@+id/tvDataConfirmation"
