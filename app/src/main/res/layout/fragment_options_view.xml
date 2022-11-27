@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.Options.view.OptionsViewFragment">
+
+    <Button
+        android:id="@+id/btnNewClaim"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_70"
+        android:layout_marginTop="@dimen/size_100"
+        android:clickable="false"
+        android:backgroundTint="@color/purple"
+        android:text="@string/new_claim"
+        android:textColor="@color/light_gray"
+        android:padding="@dimen/size_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_70"
+        android:layout_marginTop="@dimen/size_50"
+        android:backgroundTint="@color/orange"
+        android:text="@string/list_bottom"
+        android:textColor="@color/light_gray"
+        android:padding="@dimen/size_10"
+        app:layout_constraintTop_toBottomOf="@id/btnNewClaim"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/tvLogOut"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_70"
+        android:layout_marginTop="@dimen/size_50"
+        android:backgroundTint="@color/red"
+        android:text="@string/logout"
+        android:textColor="@color/light_gray"
+        android:padding="@dimen/size_10"
+        app:layout_constraintTop_toBottomOf="@id/btnList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

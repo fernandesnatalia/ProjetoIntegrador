@@ -9,57 +9,95 @@
     tools:context=".ui.register.view.RegisterFragment">
 
     <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/size_30"
-        android:layout_marginTop="@dimen/size_100"
-        android:hint="@string/hint_email"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true"
-        android:autofillHints="name"
-        android:maxLength="40"
+        android:id="@+id/etUsername"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_70"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
+        android:hint="@string/hint_name"
+        android:textColorHint="@color/light_gray"
         android:maxLines="1"
-        app:layout_constraintTop_toTopOf="parent"
+        android:maxLength="25"
+        android:autofillHints="name"
+        android:inputType="textCapWords"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCPFNumber"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
+        android:hint="@string/hint_cpf"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="11"
+        android:autofillHints="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUsername"/>
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
+        android:hint="@string/hint_phone_number"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="11"
+        android:autofillHints="phone"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCPFNumber"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
+        android:hint="@string/hint_email"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="50"
+        android:autofillHints="emailAddress"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"/>
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/size_30"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_50"
         android:layout_marginTop="@dimen/size_20"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
         android:hint="@string/hint_password"
-        android:inputType="textPassword"
-        android:selectAllOnFocus="true"
-        android:autofillHints="no"
-        android:maxLength="20"
-        android:maxLines="1"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@color/light_gray"
+        android:maxLength="8"
+        android:autofillHints="emailAddress"
+        android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etEmail"/>
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="@dimen/size_100"
-        android:layout_height="@dimen/size_50"
-        android:layout_marginTop="@dimen/size_70"
-        android:text="@string/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_50"
+        android:text="@string/register_bottom"
         android:backgroundTint="@color/red"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etPassword"/>
-
-    <Button
-        android:id="@+id/btnLeave"
-        android:layout_width="@dimen/size_100"
-        android:layout_height="@dimen/size_50"
-        android:layout_marginTop="@dimen/size_30"
-        android:text="@string/finish_bottom"
-        android:backgroundTint="@color/red"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnRegister"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

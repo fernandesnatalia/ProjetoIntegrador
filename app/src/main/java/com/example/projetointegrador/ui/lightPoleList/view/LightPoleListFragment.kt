@@ -10,7 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.FragmentLightPoleListBinding
 import com.example.projetointegrador.domain.model.LightPole
-import com.example.projetointegrador.ui.const.*
+import com.example.projetointegrador.ui.baseActivity.MainActivity
+import com.example.projetointegrador.utilities.*
 
 class LightPoleListFragment : Fragment() {
     private lateinit var binding: FragmentLightPoleListBinding

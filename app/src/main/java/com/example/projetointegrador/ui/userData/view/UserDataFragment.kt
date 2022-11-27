@@ -1,8 +1,6 @@
 package com.example.projetointegrador.ui.userData.view
 
 import android.os.Bundle
-import android.text.Editable
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -35,11 +33,9 @@ class UserDataFragment : Fragment() {
 
     private fun registration(){
         val name = binding.etUsername.text.toString()
-        val cpf = binding.etCPFNumber.text.toString()
-        val phone = binding.etPhoneNumber.text.toString()
         val email = binding.etEmail.text.toString()
         this.description = binding.etDescription.text.toString()
-        this.user = User(name, cpf, phone, email)
+        this.user = User(name, email)
     }
 
     private fun received(){

@@ -1,17 +1,18 @@
 package com.example.projetointegrador.data.datasource.local.database
 
 import androidx.room.*
-import com.example.projetointegrador.data.datasource.local.model.Info
+import com.example.projetointegrador.domain.model.LightPole
 
 @Dao
 interface InfoDao {
 
-    @Query("Select * From info")
-    fun getList(): List<Info>
+    @Query("Select * From pole_info")
+    fun getList(): List<LightPole>
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    fun updateList(item: Info)
+    fun updateList(items: LightPole)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertIntoDatabase(item: Info)
+    fun insertIntoDatabase(item: LightPole)
+
 }

@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.projetointegrador.databinding.ActivityQrcodeBinding
-import com.example.projetointegrador.ui.baseActivity.MainActivity
 import com.example.projetointegrador.ui.confirmation.view.ConfirmationFragment
 import com.google.zxing.integration.android.IntentIntegrator
 

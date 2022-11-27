@@ -1,4 +1,6 @@
-package com.example.projetointegrador.ui.const
+package com.example.projetointegrador.utilities
+
+const val REQUIRED = "Campo obrigatório!"
 
 const val POLECODE1 = "PI-II Poste 0001"
 const val POlESTREET1 = "Luis Pereira de Campos"
@@ -25,4 +27,3 @@ const val POlESTREET6 = "Waldemar Costa Filho"
 const val POLENEIG6 = "Jardim Indaiá"
 
 const val CITY = "Bertioga - SP"
-

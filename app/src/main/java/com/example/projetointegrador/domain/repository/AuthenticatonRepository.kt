@@ -10,8 +10,6 @@ import com.google.firebase.ktx.Firebase
 class AuthenticatonRepository {
     private val auth: FirebaseAuth = Firebase.auth
 
-    fun getEmail() : String = auth.currentUser?.email.toString()
-
     fun register(email: String, password: String) : Task<AuthResult> {
         return auth.createUserWithEmailAndPassword(email, password)
     }
@@ -23,6 +21,10 @@ class AuthenticatonRepository {
         val profile = UserProfileChangeRequest.Builder().setDisplayName(name).build()
         return auth.currentUser?.updateProfile(profile)
     }
+
+    fun getNameUser(): String = auth.currentUser?.displayName.toString()
+
+    fun getEmail() : String = auth.currentUser?.email.toString()
 
     fun logout() {
         auth.signOut()

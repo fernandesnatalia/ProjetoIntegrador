@@ -36,7 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
-    
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="@dimen/size_300"
@@ -52,39 +52,7 @@
         android:inputType="textCapWords"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCodeLightCode"/>
-
-    <EditText
-        android:id="@+id/etCPFNumber"
-        android:layout_width="@dimen/size_300"
-        android:layout_height="@dimen/size_50"
-        android:layout_marginTop="@dimen/size_20"
-        android:padding="@dimen/size_10"
-        android:background="@color/orange"
-        android:hint="@string/hint_cpf"
-        android:textColorHint="@color/light_gray"
-        android:maxLength="11"
-        android:autofillHints="no"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etUsername"/>
-
-    <EditText
-        android:id="@+id/etPhoneNumber"
-        android:layout_width="@dimen/size_300"
-        android:layout_height="@dimen/size_50"
-        android:layout_marginTop="@dimen/size_20"
-        android:padding="@dimen/size_10"
-        android:background="@color/orange"
-        android:hint="@string/hint_phone_number"
-        android:textColorHint="@color/light_gray"
-        android:maxLength="11"
-        android:autofillHints="phone"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etCPFNumber"/>
+        app:layout_constraintTop_toBottomOf="@id/btnCodeLightCode" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -100,12 +68,12 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"/>
+        app:layout_constraintTop_toBottomOf="@id/etUsername"/>
 
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="@dimen/size_300"
-        android:layout_height="@dimen/size_50"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/size_20"
         android:padding="@dimen/size_10"
         android:background="@color/orange"
@@ -117,7 +85,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etEmail"/>
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
 
     <Button
         android:id="@+id/btnSendUserData"

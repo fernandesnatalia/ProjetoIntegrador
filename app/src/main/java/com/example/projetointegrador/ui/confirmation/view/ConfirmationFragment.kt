@@ -11,7 +11,6 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.FragmentConfirmationBinding
 import com.example.projetointegrador.domain.model.LightPole
-import com.example.projetointegrador.ui.const.*
 
 class ConfirmationFragment : Fragment() {
     private lateinit var binding: FragmentConfirmationBinding
