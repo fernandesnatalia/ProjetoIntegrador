@@ -8,6 +8,7 @@ plugins {
 
 android {
     compileSdk 32
+    buildToolsVersion "23.0.1"
     namespace "com.example.projetointegrador"
 
     defaultConfig {
@@ -80,4 +81,5 @@ dependencies {
     //qrcode
     implementation 'com.google.zxing:core:3.3.0'
     implementation('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
+
 }

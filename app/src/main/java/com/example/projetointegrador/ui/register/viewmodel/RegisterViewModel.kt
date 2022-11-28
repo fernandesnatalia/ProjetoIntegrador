@@ -7,6 +7,7 @@ import com.example.projetointegrador.domain.model.User
 import com.example.projetointegrador.domain.repository.AuthenticatonRepository
 import com.example.projetointegrador.domain.singleliveevent.SingleLiveEvent
 import com.example.projetointegrador.domain.viewstate.ViewState
+import com.example.projetointegrador.utilities.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -21,7 +22,7 @@ class RegisterViewModel:ViewModel() {
                 val withContext = withContext(Dispatchers.Default) {
                     if(user.name.isNotEmpty() && user.cpf.isNotEmpty() &&
                         user.email.isNotEmpty() && user.password.isNotEmpty() && user.phone.isNotEmpty()){
-                    registerUser(user)
+                    registerUser(User(name = NAME, cpf = CPF, phone = PHONE, email = EMAIL, password = PASSWORD))
                     }
                 }
                 withContext.let {

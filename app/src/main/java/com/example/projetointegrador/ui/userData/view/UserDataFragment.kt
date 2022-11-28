@@ -1,5 +1,6 @@
 package com.example.projetointegrador.ui.userData.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.FragmentUserDataBinding
 import com.example.projetointegrador.domain.model.LightPole
 import com.example.projetointegrador.domain.model.User
+import com.example.projetointegrador.ui.home.view.HomeActivity
 
 class UserDataFragment : Fragment() {
     private lateinit var binding: FragmentUserDataBinding
@@ -28,7 +30,12 @@ class UserDataFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        flow()
+        binding.btnSendUserData.setOnClickListener{
+            flow()
+        }
+        binding.btnCancelUserData.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_homeActivity)
+        }
     }
 
     private fun registration(){
@@ -46,14 +53,7 @@ class UserDataFragment : Fragment() {
     private fun flow() {
         received()
         registration()
-
         val bundle = bundleOf("description" to description, "lightpole" to lightPole, "user" to user)
-
-        binding.btnSendUserData.setOnClickListener{
-            NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_endFragment, bundle)
-        }
-        binding.btnCancelUserData.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_homeFragment)
-        }
+        NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_endFragment, bundle)
     }
 }

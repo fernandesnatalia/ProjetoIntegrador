@@ -24,8 +24,9 @@
     <string name="hint_description">DESCREVA O PROBLEMA</string>
     <string name="hint_email">DIGITE SEU EMAIL</string>
     <string name="hint_password">DIGITE SUA SENHA</string>
-    <string name="send">ENTRAR</string>
+    <string name="send">CADASTRAR</string>
     <string name="cancel">CANCELAR</string>
+    <string name="enter">ENTRAR</string>
     <string name="confirmation_message">RECLAMAÇÃO ENVIADA</string>
     <string name="contact_soon">RETORNAREMOS EM BREVE\nNO E-MAIL INFORMADO</string>
     <string name="finish_bottom">IR PARA TELA INICIAL</string>
@@ -34,6 +35,7 @@
     <string name="logout">SAIR</string>
     <string name="op_failed">não foi possível concluir a operação. Tente novamente</string>
     <string name="new_claim">Registrar nova reclamação</string>
+    <string name="scan_qrcode">LEITOR DE QRCODE</string>
 
     <!-- Descriptions-->
 

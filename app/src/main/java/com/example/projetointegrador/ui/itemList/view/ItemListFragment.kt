@@ -31,7 +31,7 @@ class ItemListFragment : Fragment() {
     ): View {
         binding = FragmentItemListBinding.inflate(layoutInflater, container, false)
         factory = ItemListViewModel.ItemListViewModelFactory()
-        viewModel = ViewModelProvider(this,factory).get(ItemListViewModel::class.java)
+        viewModel = ViewModelProvider(this,factory)[ItemListViewModel::class.java]
         return binding.root
     }
 
@@ -53,8 +53,9 @@ class ItemListFragment : Fragment() {
                     binding.rvList.isVisible = false
                 }
                 Status.ERROR -> {
-                    Toast.makeText( context,"${it.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText( context,"${R.string.op_failed}", Toast.LENGTH_LONG).show()
                     binding.pbLoading.isVisible = false
+                    binding.rvList.isVisible = false
                 }
                 else -> {}
             }

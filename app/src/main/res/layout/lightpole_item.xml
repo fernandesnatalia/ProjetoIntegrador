@@ -2,7 +2,6 @@
 <androidx.cardview.widget.CardView
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:backgroundTint="@color/white"
@@ -15,86 +14,86 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/size_10">
 
-            <TextView
-                android:id="@+id/tvCodeInList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/light_pole_code"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_12"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/tvCodeInList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light_pole_code"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-            <TextView
-                android:id="@+id/tvCodeOfItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_5"
-                android:text="@string/light_pole_code"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_12"
-                android:textStyle="normal"
-                android:fontFamily="sans-serif-condensed"
-                android:maxLines="1"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@id/tvCodeInList" />
+        <TextView
+            android:id="@+id/tvCodeOfItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5"
+            android:text="@string/light_pole_code"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCodeInList" />
 
-            <TextView
-                android:id="@+id/tvStreetInList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/light_pole_street"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_12"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed"
-                android:maxLines="1"
-                app:layout_constraintTop_toBottomOf="@id/tvCodeInList"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tvStreetInList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/light_pole_street"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/tvCodeInList"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/tvStreetOfItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_5"
-                android:text="@string/light_pole_street"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_12"
-                android:textStyle="normal"
-                android:fontFamily="sans-serif-condensed"
-                android:maxLines="1"
-                app:layout_constraintTop_toBottomOf="@id/tvCodeOfItem"
-                app:layout_constraintStart_toEndOf="@id/tvStreetInList" />
+        <TextView
+            android:id="@+id/tvStreetOfItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5"
+            android:text="@string/light_pole_street"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            app:layout_constraintTop_toBottomOf="@id/tvCodeOfItem"
+            app:layout_constraintStart_toEndOf="@id/tvStreetInList" />
 
-            <TextView
-                android:id="@+id/tvNeigInList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_5"
-                android:text="@string/light_pole_district"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_12"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-condensed"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@id/tvStreetOfItem"
-                app:layout_constraintTop_toBottomOf="@id/tvCodeOfItem"/>
+        <TextView
+            android:id="@+id/tvNeigInList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5"
+            android:text="@string/light_pole_district"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/tvStreetOfItem"
+            app:layout_constraintTop_toBottomOf="@id/tvCodeOfItem"/>
 
-            <TextView
-                android:id="@+id/tvNeigOfItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_5"
-                android:text="@string/light_pole_district"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_12"
-                android:textStyle="normal"
-                android:fontFamily="sans-serif-condensed"
-                android:maxLines="1"
-                app:layout_constraintStart_toEndOf="@id/tvNeigInList"
-                app:layout_constraintTop_toBottomOf="@id/tvCodeOfItem"/>
+        <TextView
+            android:id="@+id/tvNeigOfItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_5"
+            android:text="@string/light_pole_district"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_12"
+            android:textStyle="normal"
+            android:fontFamily="sans-serif-condensed"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/tvNeigInList"
+            app:layout_constraintTop_toBottomOf="@id/tvCodeOfItem"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -14,8 +14,11 @@ import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.FragmentLoginBinding
 import com.example.projetointegrador.domain.model.User
 import com.example.projetointegrador.domain.viewstate.Status
-import com.example.projetointegrador.ui.baseActivity.MainActivity
 import com.example.projetointegrador.ui.login.viewmodel.LoginViewModel
+import com.example.projetointegrador.utilities.EMAIL
+import com.example.projetointegrador.utilities.NAME
+import com.example.projetointegrador.utilities.PASSWORD
+import com.example.projetointegrador.utilities.REQUIRED
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
@@ -43,19 +46,28 @@ class LoginFragment : Fragment() {
             when(it.status){
                 Status.SUCCESS -> {
                     val user = validate()
-                    val bundle = bundleOf("USER" to user)
-                    NavHostFragment.findNavController(this).navigate(R.id.action_loginFragment_to_optionsViewFragment, bundle)
+                    if (user != null) {
+                        viewModel.login(user)
+                        val bundle = bundleOf("USER" to user)
+                        NavHostFragment.findNavController(this).navigate(R.id.action_loginFragment_to_optionsViewFragment, bundle)
+                    }
                 }
                 Status.ERROR -> {
-                    Toast.makeText( context,"${it.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context,"${R.string.op_failed}}", Toast.LENGTH_LONG).show()
                 }
                 else -> {}
             }
         })
     }
 
-    private fun validate():User{
-        return User(binding.etEmail.text.toString(),binding.etPassword.text.toString())
+    private fun validate(): User? {
+        if (binding.etEmail.text.isNotEmpty() && binding.etPassword.text.isNotEmpty()) {
+            return User(email = EMAIL, password = PASSWORD)
+        } else {
+            binding.etEmail.error = REQUIRED
+            binding.etPassword.error = REQUIRED
+            return null
+        }
     }
 
     private fun goToRegister(){

@@ -1,13 +1,13 @@
 package com.example.projetointegrador.ui.end.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.NavHostFragment
-import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.FragmentEndBinding
+import com.example.projetointegrador.ui.home.view.HomeActivity
 
 class EndFragment : Fragment() {
     private lateinit var binding: FragmentEndBinding
@@ -19,7 +19,8 @@ class EndFragment : Fragment() {
         binding = FragmentEndBinding.inflate(layoutInflater,container,false)
 
         binding.btnFinish.setOnClickListener {
-            NavHostFragment.findNavController(this).navigate(R.id.action_endFragment_to_homeFragment)
+            val intent = Intent(this.context, HomeActivity::class.java)
+            startActivity(intent)
         }
         return binding.root
     }

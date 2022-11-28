@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_gray"
-    tools:context=".ui.Options.view.OptionsViewFragment">
+    tools:context=".ui.options.view.OptionsViewFragment">
 
     <Button
         android:id="@+id/btnNewClaim"

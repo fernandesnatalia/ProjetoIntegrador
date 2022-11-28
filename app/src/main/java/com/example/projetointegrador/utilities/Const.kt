@@ -27,3 +27,9 @@ const val POlESTREET6 = "Waldemar Costa Filho"
 const val POLENEIG6 = "Jardim Indaiá"
 
 const val CITY = "Bertioga - SP"
+
+const val NAME = "Mariana Ferreira Camargo"
+const val CPF = "40101036289"
+const val PHONE = "11987456547"
+const val EMAIL = "mariana@gmail.com"
+const val PASSWORD = "12345678"

@@ -51,7 +51,7 @@ class ConfirmationFragment : Fragment() {
             NavHostFragment.findNavController(this).navigate(R.id.action_confirmationFragment_to_userDataFragment, bundle)
         }
         binding.btnNo.setOnClickListener{
-            NavHostFragment.findNavController(this).navigate(R.id.action_confirmationFragment_to_lightPoleListFragment)
+            NavHostFragment.findNavController(this).navigate(R.id.action_confirmationFragment_to_userDataFragment)
         }
     }
 }
