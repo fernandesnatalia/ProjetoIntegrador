@@ -1,7 +1,7 @@
-package com.example.projetointegrador.data.datasource.local.database
+package com.example.projetointegrador.data.datasource.local.dao
 
 import androidx.room.*
-import com.example.projetointegrador.domain.model.LightPole
+import com.example.projetointegrador.data.model.LightPole
 
 @Dao
 interface InfoDao {

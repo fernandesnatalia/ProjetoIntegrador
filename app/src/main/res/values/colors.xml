@@ -9,6 +9,7 @@
 
     <color name="light_gray">#E3E2E0</color>
     <color name="dark_gray">#413636</color>
+    <color name="backgraound_gray">#BFBDBA</color>
     <color name="purple">#5B32F0</color>
     <color name="orange">#F09C36</color>
     <color name="red">#F54532</color>

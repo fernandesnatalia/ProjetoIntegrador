@@ -1,24 +1,20 @@
 package com.example.projetointegrador.ui.userData.view
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.projetointegrador.R
+import com.example.projetointegrador.data.model.LightPole
 import com.example.projetointegrador.databinding.FragmentUserDataBinding
-import com.example.projetointegrador.domain.model.LightPole
 import com.example.projetointegrador.domain.model.User
-import com.example.projetointegrador.ui.home.view.HomeActivity
 
 class UserDataFragment : Fragment() {
     private lateinit var binding: FragmentUserDataBinding
     private lateinit var lightPole: LightPole
-    private lateinit var user: User
-    private lateinit var description: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,22 +34,25 @@ class UserDataFragment : Fragment() {
         }
     }
 
-    private fun registration(){
+    private fun registration(): User{
         val name = binding.etUsername.text.toString()
         val email = binding.etEmail.text.toString()
-        this.description = binding.etDescription.text.toString()
-        this.user = User(name, email)
+        lightPole.description = binding.etDescription.text.toString()
+        return User(name, email)
     }
 
-    private fun received(){
+    private fun received(): LightPole {
         this.lightPole = arguments?.getParcelable("KEY")!!
-        binding.btnCodeLightCode.text = lightPole.code
+        return lightPole
     }
 
     private fun flow() {
-        received()
-        registration()
-        val bundle = bundleOf("description" to description, "lightpole" to lightPole, "user" to user)
+        val data = received()
+        val user = registration()
+
+        data.code = binding.btnCodeLightCode.text.toString()
+
+        val bundle = bundleOf("lightpole" to data, "user" to user)
         NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_endFragment, bundle)
     }
 }

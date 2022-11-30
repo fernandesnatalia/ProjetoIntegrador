@@ -38,6 +38,9 @@
         <action
             android:id="@+id/action_optionsViewFragment_to_itemListFragment"
             app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_optionsViewFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/lightPoleListFragment"
@@ -70,6 +73,9 @@
         <action
             android:id="@+id/action_confirmationFragment_to_userDataFragment"
             app:destination="@id/userDataFragment" />
+        <action
+            android:id="@+id/action_confirmationFragment_to_lightPoleListFragment"
+            app:destination="@id/lightPoleListFragment" />
     </fragment>
     <fragment
         android:id="@+id/endFragment"

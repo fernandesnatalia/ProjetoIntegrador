@@ -1,4 +1,4 @@
-package com.example.projetointegrador.ui.itemList.viewmodel
+package com.example.projetointegrador.ui.confirmation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -8,28 +8,25 @@ import com.example.projetointegrador.domain.repository.Repository
 import com.example.projetointegrador.domain.singleliveevent.SingleLiveEvent
 import com.example.projetointegrador.domain.viewstate.ViewState
 
-class ItemListViewModel(): ViewModel() {
-    val list = SingleLiveEvent<ViewState<List<LightPole>>>()
+class ConfirmationViewModel(): ViewModel() {
+    var item = SingleLiveEvent<ViewState<LightPole>>()
     private val dao = AppApplication.getdatabase().InfoDao()
     private val repository = Repository(dao)
 
-    fun getList(): ViewState<List<LightPole>> {
-        return try{
-            val list = repository.getList()
-            if(list.isEmpty()){
-                ViewState.empty(list)
-            }else{
-                ViewState.success(list)
-            }
-        }catch (e:Exception){
-            ViewState.error(null, e.message)
+    fun insertToDatabase(lightPole: LightPole){
+        item.value = ViewState.loading(null)
+        try{
+            repository.insertIntoDatabase(lightPole)
+            item.value = ViewState.success(lightPole)
+        }catch (e: Exception){
+            item.value = ViewState.error(null, e.message)
         }
     }
 
-    class ItemListViewModelFactory() : ViewModelProvider.Factory {
+    class ConfirmationViewModelFactory() : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(ItemListViewModel::class.java)) {
-                return ItemListViewModel() as T
+            if (modelClass.isAssignableFrom(ConfirmationViewModel::class.java)) {
+                return ConfirmationViewModel() as T
             }
             throw IllegalArgumentException("unknown viewmodel class")
         }

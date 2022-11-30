@@ -1,16 +1,18 @@
-package com.example.projetointegrador.data.datasource.local.database
+package com.example.projetointegrador.data.datasource.local
 
 import android.app.Application
 import androidx.room.Room
+import com.example.projetointegrador.data.datasource.local.database.InfoDatabase
 
 class AppApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         database = Room.databaseBuilder(
             applicationContext,
-            InfoDatabase::class.java, "database-light-pole"
+            InfoDatabase::class.java, "database-lightpole"
         )
-            .fallbackToDestructiveMigration().allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
+            .allowMainThreadQueries()
             .build()
     }
 

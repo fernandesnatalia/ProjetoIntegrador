@@ -3,7 +3,6 @@ package com.example.projetointegrador.ui.qrcode
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.projetointegrador.R
 import com.example.projetointegrador.databinding.ActivityQrcodeBinding
 import com.example.projetointegrador.ui.baseActivity.MainActivity
 import com.google.zxing.integration.android.IntentIntegrator

@@ -36,6 +36,8 @@
     <string name="op_failed">não foi possível concluir a operação. Tente novamente</string>
     <string name="new_claim">Registrar nova reclamação</string>
     <string name="scan_qrcode">LEITOR DE QRCODE</string>
+    <string name="empty_list">Não há items favoritados!</string>
+
 
     <!-- Descriptions-->
 
