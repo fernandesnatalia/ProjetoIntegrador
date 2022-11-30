@@ -21,7 +21,7 @@
     <string name="hint_name">INSIRA SEU NOME</string>
     <string name="hint_cpf">INSIRA SEU CPF</string>
     <string name="hint_phone_number">INSIRA SEU TELEFONE</string>
-    <string name="hint_description">DESCREVA O PROBLEMA</string>
+    <string name="hint_description">O poste em questão emite um baru\nlho de eletricidade em dias de chu\nva e está apagado desde o mês \npassado, setembro. È preocupante \npara os moradores pois fica em \numa região bem escura do bairro</string>
     <string name="hint_email">DIGITE SEU EMAIL</string>
     <string name="hint_password">DIGITE SUA SENHA</string>
     <string name="send">CADASTRAR</string>
@@ -37,7 +37,7 @@
     <string name="new_claim">Registrar nova reclamação</string>
     <string name="scan_qrcode">LEITOR DE QRCODE</string>
     <string name="empty_list">Não há items favoritados!</string>
-    <string name="hello">Olá, </string>
+    <string name="hello">Olá, Mariana</string>
 
 
     <!-- Descriptions-->

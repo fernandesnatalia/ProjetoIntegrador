@@ -3,11 +3,11 @@ package com.example.projetointegrador.ui.register.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.example.projetointegrador.R
 import com.example.projetointegrador.domain.model.User
 import com.example.projetointegrador.domain.repository.AuthenticatonRepository
 import com.example.projetointegrador.domain.singleliveevent.SingleLiveEvent
 import com.example.projetointegrador.domain.viewstate.ViewState
-import com.example.projetointegrador.utilities.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -22,14 +22,15 @@ class RegisterViewModel:ViewModel() {
                 val withContext = withContext(Dispatchers.Default) {
                     if(user.name.isNotEmpty() && user.cpf.isNotEmpty() &&
                         user.email.isNotEmpty() && user.password.isNotEmpty() && user.phone.isNotEmpty()){
-                    registerUser(User(name = NAME, cpf = CPF, phone = PHONE, email = EMAIL, password = PASSWORD))
+                    registerUser(User(user.name, user.cpf, user.phone, user.email,user.password))
+                    repository.updateProfile(user.name)
                     }
                 }
                 withContext.let {
                     data.value = ViewState.success(user)
                 }
             } catch (e: Exception) {
-                data.value = ViewState.error(null, e.message)
+                data.value = ViewState.error(null, "${R.string.op_failed}}")
             }
         }
     }
@@ -41,12 +42,9 @@ class RegisterViewModel:ViewModel() {
                     user.email,
                     user.password
                 ).addOnSuccessListener {
-                    repository.updateProfile(user.name)?.addOnSuccessListener {
                         data.value = ViewState.success(user)
-                    }
-
                 }.addOnFailureListener {
-                    data.value = ViewState.error(null, it.message)
+                    data.value = ViewState.error(null, "${R.string.op_failed}}")
 
                 }
             }

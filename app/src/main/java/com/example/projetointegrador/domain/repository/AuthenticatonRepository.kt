@@ -24,8 +24,6 @@ class AuthenticatonRepository {
 
     fun getNameUser(): String = auth.currentUser?.displayName.toString()
 
-    fun getEmail() : String = auth.currentUser?.email.toString()
-
     fun logout() {
         auth.signOut()
     }

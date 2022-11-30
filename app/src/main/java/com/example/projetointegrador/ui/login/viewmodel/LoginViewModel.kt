@@ -2,6 +2,7 @@ package com.example.projetointegrador.ui.login.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.projetointegrador.R
 import com.example.projetointegrador.domain.model.User
 import com.example.projetointegrador.domain.repository.AuthenticatonRepository
 import com.example.projetointegrador.domain.singleliveevent.SingleLiveEvent
@@ -17,10 +18,10 @@ class LoginViewModel: ViewModel() {
             ).addOnSuccessListener {
                 data.value = ViewState.success(user)
             }.addOnFailureListener {
-                data.value = ViewState.error(null, it.message)
+                data.value = ViewState.error(null, "${R.string.op_failed}}")
             }
         }catch(e:Exception){
-            data.value = ViewState.error(null, e.message)
+            data.value = ViewState.error(null, "${R.string.op_failed}}")
         }
     }
 

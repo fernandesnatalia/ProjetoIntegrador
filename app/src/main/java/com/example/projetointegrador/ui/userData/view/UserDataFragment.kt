@@ -4,16 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
 import com.example.projetointegrador.R
 import com.example.projetointegrador.data.model.LightPole
 import com.example.projetointegrador.databinding.FragmentUserDataBinding
-import com.example.projetointegrador.domain.model.User
+import com.example.projetointegrador.ui.userData.viewmodel.UserDataViewModel
 
 class UserDataFragment : Fragment() {
     private lateinit var binding: FragmentUserDataBinding
+    private lateinit var viewModel: UserDataViewModel
+    private lateinit var factory: UserDataViewModel.UserDataViewModelFactory
     private lateinit var lightPole: LightPole
 
     override fun onCreateView(
@@ -21,11 +23,14 @@ class UserDataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentUserDataBinding.inflate(layoutInflater,container,false)
+        factory = UserDataViewModel.UserDataViewModelFactory()
+        viewModel = ViewModelProvider(this, factory).get(UserDataViewModel::class.java)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         binding.btnSendUserData.setOnClickListener{
             flow()
         }
@@ -34,25 +39,20 @@ class UserDataFragment : Fragment() {
         }
     }
 
-    private fun registration(): User{
-        val name = binding.etUsername.text.toString()
-        val email = binding.etEmail.text.toString()
+    private fun registration(){
         lightPole.description = binding.etDescription.text.toString()
-        return User(name, email)
+        binding.btnCodeLightCode.text = lightPole.code
     }
 
     private fun received(): LightPole {
-        this.lightPole = arguments?.getParcelable("KEY")!!
+        lightPole = arguments?.getParcelable("KEY")!!
         return lightPole
     }
 
     private fun flow() {
-        val data = received()
-        val user = registration()
-
-        data.code = binding.btnCodeLightCode.text.toString()
-
-        val bundle = bundleOf("lightpole" to data, "user" to user)
-        NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_endFragment, bundle)
+        received()
+        registration()
+        viewModel.insertToDatabase(lightPole)
+        NavHostFragment.findNavController(this).navigate(R.id.action_userDataFragment_to_endFragment)
     }
 }

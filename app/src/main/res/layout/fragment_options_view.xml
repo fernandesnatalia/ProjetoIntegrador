@@ -17,7 +17,7 @@
         android:backgroundTint="@color/orange"
         android:clickable="false"
         android:padding="@dimen/size_10"
-        android:text="@string/hint_name"
+        android:text="@string/hello"
         android:textColor="@color/light_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

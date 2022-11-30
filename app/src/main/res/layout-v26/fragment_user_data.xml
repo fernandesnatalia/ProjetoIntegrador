@@ -47,7 +47,7 @@
         android:background="@color/orange"
         android:hint="@string/hint_description"
         android:textColorHint="@color/light_gray"
-        android:justificationMode="inter_word"
+        android:justificationMode="none"
         android:maxLines="10"
         android:maxLength="200"
         android:autofillHints="name"

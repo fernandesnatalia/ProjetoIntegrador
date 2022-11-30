@@ -15,8 +15,6 @@ import com.example.projetointegrador.databinding.FragmentLoginBinding
 import com.example.projetointegrador.domain.model.User
 import com.example.projetointegrador.domain.viewstate.Status
 import com.example.projetointegrador.ui.login.viewmodel.LoginViewModel
-import com.example.projetointegrador.utilities.EMAIL
-import com.example.projetointegrador.utilities.PASSWORD
 import com.example.projetointegrador.utilities.REQUIRED
 
 class LoginFragment : Fragment() {
@@ -66,9 +64,9 @@ class LoginFragment : Fragment() {
             binding.etEmail.error = REQUIRED
             binding.etPassword.error = REQUIRED
         } else {
-            binding.etEmail.error = REQUIRED
-            binding.etPassword.error = REQUIRED
-            this.user = User(email = EMAIL, password = PASSWORD)
+            val email = binding.etEmail.text.toString()
+            val pass = binding.etPassword.text.toString()
+            this.user = User(email = email, password = pass)
         }
     }
 
