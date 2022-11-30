@@ -61,7 +61,6 @@ class ItemListFragment : Fragment() {
                 Status.ERROR -> {
                     Toast.makeText( context,"${R.string.op_failed}", Toast.LENGTH_LONG).show()
                     binding.pbLoading.isVisible = false
-                    binding.rvList.isVisible = false
                 }
             }
         })

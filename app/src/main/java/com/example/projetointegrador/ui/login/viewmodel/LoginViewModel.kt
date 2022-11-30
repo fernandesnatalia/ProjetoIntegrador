@@ -1,6 +1,7 @@
 package com.example.projetointegrador.ui.login.viewmodel
 
-import androidx.lifecycle.*
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.example.projetointegrador.domain.model.User
 import com.example.projetointegrador.domain.repository.AuthenticatonRepository
 import com.example.projetointegrador.domain.singleliveevent.SingleLiveEvent
@@ -8,7 +9,7 @@ import com.example.projetointegrador.domain.viewstate.ViewState
 
 class LoginViewModel: ViewModel() {
     private val repository = AuthenticatonRepository()
-    var data = SingleLiveEvent<ViewState<User>>()
+    val data = SingleLiveEvent<ViewState<User>>()
 
     fun login(user:User){
         try{
