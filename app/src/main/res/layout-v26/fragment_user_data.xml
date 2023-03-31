@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".ui.userData.view.UserDataFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/size_200"
+        android:layout_height="wrap_content"
+        android:text="@string/light_pole_title"
+        android:textColor="@color/purple"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_18"
+        android:layout_marginTop="@dimen/size_30"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/btnCodeLightCode"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
+        android:text="@string/light_pole_code"
+        android:textColor="@color/light_gray"
+        android:textAlignment="viewStart"
+        android:textSize="@dimen/size_20"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="@dimen/size_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20"
+        android:padding="@dimen/size_10"
+        android:background="@color/orange"
+        android:hint="@string/hint_description"
+        android:textColorHint="@color/light_gray"
+        android:justificationMode="none"
+        android:maxLines="10"
+        android:maxLength="200"
+        android:autofillHints="name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCodeLightCode" />
+
+    <Button
+        android:id="@+id/btnSendUserData"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:layout_marginStart="@dimen/size_30"
+        android:backgroundTint="@color/red"
+        android:text="@string/send"
+        android:textColor="@color/light_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCancelUserData"
+        app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+    <Button
+        android:id="@+id/btnCancelUserData"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="@dimen/size_50"
+        android:layout_marginTop="@dimen/size_20"
+        android:layout_marginEnd="@dimen/size_30"
+        android:backgroundTint="@color/red"
+        android:text="@string/cancel"
+        android:textColor="@color/light_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnSendUserData"
+        app:layout_constraintTop_toBottomOf="@id/etDescription"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

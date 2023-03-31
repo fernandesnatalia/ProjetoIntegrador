@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.projetointegrador.ui.login.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_optionsViewFragment"
+            app:destination="@id/optionsViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.projetointegrador.ui.register.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_optionsViewFragment"
+            app:destination="@id/optionsViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionsViewFragment"
+        android:name="com.example.projetointegrador.ui.options.view.OptionsViewFragment"
+        android:label="fragment_options_view"
+        tools:layout="@layout/fragment_options_view" >
+        <action
+            android:id="@+id/action_optionsViewFragment_to_lightPoleListFragment"
+            app:destination="@id/lightPoleListFragment" />
+        <action
+            android:id="@+id/action_optionsViewFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+        <action
+            android:id="@+id/action_optionsViewFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightPoleListFragment"
+        android:name="com.example.projetointegrador.ui.lightPoleList.view.LightPoleListFragment"
+        android:label="fragment_light_pole_list"
+        tools:layout="@layout/fragment_light_pole_list" >
+        <action
+            android:id="@+id/action_lightPoleListFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.projetointegrador.ui.itemList.view.ItemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.projetointegrador.ui.detail.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.projetointegrador.ui.confirmation.view.ConfirmationFragment"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" >
+        <action
+            android:id="@+id/action_confirmationFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+        <action
+            android:id="@+id/action_confirmationFragment_to_lightPoleListFragment"
+            app:destination="@id/lightPoleListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.projetointegrador.ui.end.view.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" />
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.example.projetointegrador.ui.userData.view.UserDataFragment"
+        android:label="fragment_user_data"
+        tools:layout="@layout/fragment_user_data" >
+        <action
+            android:id="@+id/action_userDataFragment_to_endFragment"
+            app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_userDataFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.projetointegrador.ui.home.view.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/QRCodeActivity"
+        android:name="com.example.projetointegrador.ui.qrcode.QRCodeActivity"
+        android:label="activity_qrcode"
+        tools:layout="@layout/activity_qrcode" />
+</navigation>
